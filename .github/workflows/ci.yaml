@@ -1,7 +1,7 @@
 name: Continious Integration
 on: push
 env:
-  DBNAME: ${{ secrets.DBNAME }}
+  TESTDBNAME: ${{ secrets.DBNAME }}
   DBUSER: ${{ secrets.DBUSER }}
   DBPASSWORD: ${{ secrets.DBPASSWORD }}
   DBHOST: ${{ secrets.DBHOST }}

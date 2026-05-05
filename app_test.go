@@ -17,7 +17,7 @@ func TestMain(m *testing.M){
 	_ = godotenv.Load()
 	var DBUser = os.Getenv("DBUSER")
 	var DBPassword = os.Getenv("DBPASSWORD")
-	var DBName = os.Getenv("DBNAME")
+	var DBName = os.Getenv("TESTDBNAME")
 	if DBName == "" {
 		DBName = "test"
 	}
