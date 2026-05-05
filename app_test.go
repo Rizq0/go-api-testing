@@ -17,8 +17,12 @@ func TestMain(m *testing.M){
 	_ = godotenv.Load()
 	var DBUser = os.Getenv("DBUSER")
 	var DBPassword = os.Getenv("DBPASSWORD")
+	var DBName = os.Getenv("DBNAME")
+	if DBName == "" {
+		DBName = "test"
+	}
 	var Host = os.Getenv("DBHOST")
-	err := a.Initialise(DBUser, DBPassword, "test", Host)
+	err := a.Initialise(DBUser, DBPassword, DBName, Host)
 	if err != nil {
 		panic(err)
 	}
